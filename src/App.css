@@ -1,38 +1,371 @@
-.App {
+body{
+  background-color: black;
+  overflow-x: hidden;
+}
+.navbar{
+  height: 20vh;
+  background-color: rgba(0, 0, 0, 0.895);
+  color: rgb(255, 0, 225);
+  font-size: 2.5vw;
+  font-weight: bolder;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction:row;
+  box-shadow: 0 5px 50px rgb(91, 199, 81);
+  position:sticky;top: 0.1px;
+ 
+  
+}
+.navdesc{
+  height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction:column;
+ 
+}
+.p1{
+  margin: 3vh 0 0vh 0vw;
   text-align: center;
+  
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.p2{
+  margin: 0vh 0 2vh 0;
+  font-size: 1.9vw;
+  color: rgb(247, 0, 186);
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.pic1{
+  margin: 3vh 10vw 2vh 1vw;
+ 
+  animation: pic1ani 5s   infinite alternate-reverse ;
+}
+.pic2{
+  margin: 3vh 3vw 2vh 5vw;
+  animation: pic2ani 5s   infinite alternate-reverse ;
+}
+.pic1 img{
+  width: 15vw;
+  height: 20vh;
+  border-radius: 3vw;
+}
+.pic2 img{
+  width: 15vw;
+  height: 20vh;
+  border-radius: 3vw;
+}
+@keyframes pic1ani {
+  0%{
+transform: translateX(-19vw);
+  }
+  90%{
+    display: none;
+  }
+  100%{
+    transform: translateX(+10vw) ;
+    
   }
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+@keyframes pic2ani {
+  0%{
+transform: translateX(+19vw);
+  }
+  90%{
+    display: none;
+  }
+  100%{
+    transform: translateX(-5vw);
+  }
+}
+.seatheading{
+  color: aqua;
+  font-size: 2vw;
+  text-align: center;
+  font-family: 'Times New Roman', Times, serif;
+  
+}
+.subhead{
+  color: rgb(0, 217, 255);
+  font-size: 1.5vw;
+  margin: 0vh 35vw 0 35vw;
+  text-align: center;
+  font-family: 'Times New Roman', Times, serif;
+}
+.seat{
   display: flex;
   flex-direction: column;
-  align-items: center;
+}
+.block{
+/* background-color: rgb(145, 198, 198); */
+box-shadow: 0 5px 50px rgb(58, 55, 150);
+width: 85vw;
+height: 30vh;
+margin: 5vh 7.5vw 5vh 7.5vw;
+display: flex;
+flex-direction: row;
+color: white;
+}
+.branch{
+ 
+  width:30vw ;
+  height:25vh ;
+  margin: 2.5vh 2.5vw 2.5vh 2.5vw;
+  display: flex;
+  flex-direction: column;
+}
+.row{
+  display: flex;
+  flex-direction: row;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  
+  width: 100%;
+  height: 45%;
+margin: 2.5vh 0 2.5vh 0;
+}
+.row input{
+ width: 2vw;
+ height: 5vh;
+ margin: 3vh 0.3vw 2vh 0.3vw;
+ box-shadow: 0 5px 50px rgba(196, 42, 42, 0.865);
+ background-color: red;
+ border: 2px solid red;
+}
+.seat-desc{
+ 
+  color: rgb(102, 255, 0);
+  font-size: 1.4vw;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  text-align: center;
+  padding: 8vh 0 0 0;
+}
+.seat-alert{
+  color: yellow;
+  font-size: 2vw;
+  font-weight: bolder;
+  margin: 5vh 0 0 2vh;
+  text-align: center;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.seat-conclution{
+  background-color: rgba(27, 28, 27, 0.817);
+  box-shadow: 0 5px 50px rgba(23, 23, 23, 0.865);
+  border-radius: 6vw;
+  width: 65vw;
+  height: 45vh;
+  margin:10vh 17.5vw 0 17.5vw ;
+  font-size: 3vw;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color: rgb(192, 4, 255);
+  display: flex;
+  flex-direction: column;
+  padding: 3vh 0 0 0 ;
+  align-items: center;
+}
+.seatprice{
+  width: 10vw;
+  height: 5vh;
+  text-align: center;
+  font-size: 1.8vw;
+  margin: 2vh  0 3vh 0;
+
+}
+.confirm-seat-book{
+  margin: 2vh 0 0 0 ;
+  
+  
+}
+.confirm-seat{
+  margin: 0 45vw 2vh 45vw;
+  background-color: rgb(8, 8, 248);
+  border: 2px solid rgb(0, 0, 250);
+  width: 9.8vw;
+  height: 8vh;
+  color: white;
+  border-radius: 1vw;
+  font-size: 1vw;
+  font-weight: bolder;
+  font-family:Georgia, 'Times New Roman', Times, serif;
+}
+.for-movie-btn{
+  width: 9.8vw;
+  height: 4.9vh;
+  background-color: rgb(17, 255, 0);
+  border: 2px solid rgb(17, 255, 0) ;
+  font-size: 1.2vw;
+  font-weight: bolder;
+  margin: 2vh 0 0 0;
+  box-shadow: 0 5px 50px rgba(69, 90, 54, 0.865);
+}
+.moviecont{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: auto;
+ 
+  width: 90vw;
+}
+.movie{
+  color: rgb(152, 63, 152);
+  display: flex;
+  flex-direction: column;
+  width: 20vw;
+  
+  margin: 6vh 3vw 3vh 6vw ;
+  box-shadow: 0 5px 50px rgba(90, 54, 87, 0.865);
+  border-radius: 2vw;
+}
+.movie img{
+  width: 20vw;
+  height: 35vh;
+  border-radius: 2vw;
+}
+.moviedesc{
+
+  width: 100%;
+  font-size: 1.5vw;
+  line-height: 0.5vw;
+ text-align: center;
+ font-family:'Times New Roman', Times, serif;
+ margin: 0 0 0 0;
+}
+.moviebooking{
+  height: 13vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 2vw;
+}
+.moviebooking p{
+  margin: 0vh 0 1vh 0;
+  color: chartreuse;
+}
+.no-mov-tik {
+  width:3vw ;
+  margin: 0 0 1vh 0;
+}
+.conf-movie{
+  width: 5vw;
+  background-color: blue;
+  border: 2px solid blue;
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.div{
+  color: rgb(255, 7, 7);
+  background-color: rgb(255, 255, 255);
+  width: 25vw;
+  height: 10vh;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.movie-result-container{
+  font-size: 2vw;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+ 
+  background-color: rgba(6, 180, 249, 0.262);
+  box-shadow: 0 5px 50px rgba(76, 74, 74, 0.638);
+  width:45vw;
+  height: 60vh;
+  margin: 12vh 27.5vw 5vh 27.5vw;
+  border-radius: 2vw;
+  display: flex;
+  flex-direction: column;
+ align-items: center;
+ 
+}
+.mp1{
+  background-color: rgba(11, 50, 222, 0.45);
+  color: chartreuse;
+  text-align: center;
+  margin: 3vh 6vw 3vh 7vw;
+  width: 65%;
+  height: 6vh;
+  border-radius: 2vw;
+}
+.mp2{
+  margin: 0 0 2vh 0;
+  color: rgb(45, 255, 3);
+  
+}
+.mp3
+{
+  margin: 0 0 2vh 0;
+  color: rgb(247, 3, 255);
+  
+}
+.mp4
+{
+  margin: 0 0 2vh 0;
+  color: rgb(3, 255, 238);
+  
+}
+.mp4 input{
+  width: 10vw;
+  height: 6vh;
+  font-size: 2vw;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  text-align: center;
+}
+.mp5{
+  background-color: rgb(55, 255, 0);
+  box-shadow: 0 5px 50px rgba(0, 0, 0, 0.649);
+  border-radius: 2vw;
+  width: 33vw;
+  height: 5.9vh;
+  border: 2px solid rgb(0, 191, 255);
+  
+ 
+  text-align: center;
+  margin: 2vh 0 2vh 0;
+  
+  animation: mp4ani 9s   infinite alternate-reverse ;
+}
+a {
+  text-decoration: none;
+}
+@keyframes mp4ani {
+  from{
+    transform: translateX(+1vw);
   }
-  to {
-    transform: rotate(360deg);
+  to{
+    transform: translateX(-1vw);
   }
+}
+.mp6{
+  background-color: rgb(0, 191, 255);
+  box-shadow: 0 5px 50px rgba(0, 0, 0, 0.649);
+  border-radius: 2vw;
+  width: 20vw;
+  text-align: center;
+  margin: 2vh 0 2vh 0;
+  color: white;
+  height: 5.9vh;
+  border: 2px solid rgb(55, 255, 0);
+ 
+}
+.mp0{
+  background-color: rgb(251, 255, 0);
+  box-shadow: 0 5px 50px rgba(0, 0, 0, 0.649);
+  border-radius: 2vw;
+  width: 30vw;
+  text-align: center;
+  margin: 5vh 0 2vh 0;
+  color: rgb(249, 10, 10);
+  height: 5.9vh;
+  border: 2px solid rgb(225, 255, 0);
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.complete-order{
+  background-color: rgb(81, 62, 165);
+  box-shadow: 0 5px 50px rgba(88, 86, 86, 0.649);
+  border-radius: 2vw;
+  width: 20vw;
+  text-align: center;
+  margin: 2vh 40vw 2vh 40vw;
+  color: white;
+  height: 5.9vh;
+  border: 2px solid rgb(33, 33, 121);
+ font-family: Georgia, 'Times New Roman', Times, serif ;
+  font-size: 2vw;
+  
 }
