@@ -161,7 +161,7 @@ setall(totalmovieprice+totalfood+seatprice)
     <Routes>
     
    
-    <Route exact path='/Ticket-App' element={<Seat seatbook1={seatbook1} seatbook2={seatbook2} seatbook3={seatbook3}  />}/>
+    <Route exact path='/' element={<Seat seatbook1={seatbook1} seatbook2={seatbook2} seatbook3={seatbook3}  />}/>
     <Route exact path='/confirmseat' element={
     <Confirmseat seatprice={seatprice}/>}/> 
     <Route exact path='/movie' element={<Movie handlechangemovie={handlechangemovie}movieprice1={movieprice1} movieprice2={movieprice2} movieprice4={movieprice4} movieprice5={movieprice5} movieprice7={movieprice7} movieprice3={movieprice3} movieprice6={movieprice6}/>}/>
