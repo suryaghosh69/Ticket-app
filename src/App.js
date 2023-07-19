@@ -155,7 +155,8 @@ setall(totalmovieprice+totalfood+seatprice)
 }
   return (
    <div>
-    <BrowserRouter basename='/Movie-Ticket-App'>
+    <BrowserRouter >
+    {/*  basename='/Movie-Ticket-App'*/}
     <Navbar/>
     <Routes>
     
