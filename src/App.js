@@ -57,28 +57,28 @@ setmoviename('Pathaan')
 setmovietime('7.00 AM')
 
 }
-const movieprice3 =()=>{
+const movieprice2 =()=>{
 settotalmovieprice(movie*90)
 setmoviename('Bajirao Mastani')
 setmovietime('9.45 AM')
 }
-const movieprice2 =()=>{
+const movieprice3 =()=>{
 settotalmovieprice(movie*180)
 setmoviename('Ganapath')
 setmovietime('11.45 AM')
 }
-const movieprice6 =()=>{
+const movieprice4 =()=>{
 settotalmovieprice(movie*180)
 setmoviename('Hate story-3')
 setmovietime('02.10 PM')
 }
 
-const movieprice4 =()=>{
+const movieprice5 =()=>{
 settotalmovieprice(movie*270)
 setmoviename('Mission Istaanbul')
 setmovietime('04.10 PM')
 }
-const movieprice5 =()=>{
+const movieprice6=()=>{
 settotalmovieprice(movie*360)
 setmoviename('Bhoot Police')
 setmovietime('06.10 PM')
