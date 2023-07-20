@@ -15,6 +15,7 @@ import Food from './components/Food';
 import Finish1 from './components/Finish1';
 import Final from './components/Final';
 function App() { 
+  // disble seat 
   // for seat
   const [seatprice , setseatprice]=useState(0)
   
@@ -23,6 +24,7 @@ setseatprice(seatprice+180)
 e.target.style.backgroundColor="green"
 e.target.style.border="2px solid green"
 e.target.style.boxShadow=" 0 5px 50px green"
+
 
   }
 
@@ -156,12 +158,12 @@ setall(totalmovieprice+totalfood+seatprice)
   return (
    <div>
     <BrowserRouter basename='/Ticket-App'>
-    {/*  */}
+  
     <Navbar/>
     <Routes>
     
    
-    <Route exact path='/' element={<Seat seatbook1={seatbook1} seatbook2={seatbook2} seatbook3={seatbook3}  />}/>
+    <Route exact path='/' element={<Seat seatbook1={seatbook1} seatbook2={seatbook2} seatbook3={seatbook3} seatprice={seatprice}  />}/>
     <Route exact path='/confirmseat' element={
     <Confirmseat seatprice={seatprice}/>}/> 
     <Route exact path='/movie' element={<Movie handlechangemovie={handlechangemovie}movieprice1={movieprice1} movieprice2={movieprice2} movieprice4={movieprice4} movieprice5={movieprice5} movieprice7={movieprice7} movieprice3={movieprice3} movieprice6={movieprice6}/>}/>

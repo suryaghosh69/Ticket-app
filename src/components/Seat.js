@@ -14,6 +14,7 @@ export default function Seat(props) {
     
 //     console.log(row1);
 //   }, []);
+
   return (
     <>
 <p className='seatheading'> BOOK YOUR SEAT NOW!</p><br />
@@ -23,7 +24,7 @@ export default function Seat(props) {
 
         <div className="branch">
             <div className="row row1">
-                <input type="button"   value="" onClick={props.seatbook1}/>
+                <input type="button"   value=""   onClick={props.seatbook1}/>
                 <input type="button"   value="" onClick={props.seatbook1}/>
                 <input type="button"   value="" onClick={props.seatbook1}/>
                 <input type="button"   value="" onClick={props.seatbook1}/>
@@ -189,7 +190,7 @@ export default function Seat(props) {
              </div>
                 
             <div className="row">
-            <input type="button" value="" onClick={props.seatbook3} />
+            <input type="button" value="" onClick={props.seatbook3 } />
             <input type="button" value="" onClick={props.seatbook3} />
             <input type="button" value="" onClick={props.seatbook3} />
             <input type="button" value="" onClick={props.seatbook3} />
@@ -207,7 +208,7 @@ export default function Seat(props) {
             
 </div>
 <div className="confirm-seat-book">
-   <NavLink to="/confirmseat"> <input type="button" className='confirm-seat' value="Confirm Booking" /></NavLink>
+   <NavLink to="/confirmseat"> <input type="button" disabled={!props.seatprice}  className='confirm-seat' value="Confirm Booking" /></NavLink>
 </div>
 
     </>
