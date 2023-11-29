@@ -187,6 +187,12 @@ margin: 2.5vh 0 2.5vh 0;
   font-weight: bolder;
   font-family:Georgia, 'Times New Roman', Times, serif;
 }
+.confirm-seat:disabled{
+  cursor: no-drop;
+  background-color: rgb(142, 155, 166);
+  color: rgb(68, 65, 65);
+  border: 2px solid rgb(142, 155, 166);
+}
 .for-movie-btn{
   width: 9.8vw;
   height: 4.9vh;

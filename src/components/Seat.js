@@ -14,7 +14,11 @@ export default function Seat(props) {
     
 //     console.log(row1);
 //   }, []);
-
+const[dis,setdis]=useState()
+const disabling=()=>{
+ setdis(true)
+ console.log("disabled")
+}
   return (
     <>
 <p className='seatheading'> BOOK YOUR SEAT NOW!</p><br />
@@ -24,6 +28,7 @@ export default function Seat(props) {
 
         <div className="branch">
             <div className="row row1">
+                {/* <input type="button" disabled={dis}  value=""   onClick={()=>[disabling(),props.seatbook1]}/> */}
                 <input type="button"   value=""   onClick={props.seatbook1}/>
                 <input type="button"   value="" onClick={props.seatbook1}/>
                 <input type="button"   value="" onClick={props.seatbook1}/>

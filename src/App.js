@@ -46,6 +46,7 @@ const[totalmovieprice , settotalmovieprice] = useState(0)
 const [movie , setmovie] =useState(1)
 const [moviename , setmoviename]=useState('')
 const [movietime , setmovietime]=useState('')
+const [moviedate , setmoviedate]=useState('')
 
 
 const handlechangemovie =e=>{
@@ -57,39 +58,46 @@ const movieprice1 =()=>{
 settotalmovieprice(movie*90)
 setmoviename('Pathaan')
 setmovietime('7.00 AM')
+setmoviedate('12/10/23')
 
 }
 const movieprice2 =()=>{
 settotalmovieprice(movie*90)
 setmoviename('Bajirao Mastani')
 setmovietime('9.45 AM')
+setmoviedate('12/15/23')
 }
 const movieprice3 =()=>{
 settotalmovieprice(movie*180)
 setmoviename('Ganapath')
 setmovietime('11.45 AM')
+setmoviedate('12/18/23')
 }
 const movieprice4 =()=>{
 settotalmovieprice(movie*180)
 setmoviename('Hate story-3')
 setmovietime('02.10 PM')
+setmoviedate('12/25/23')
 }
 
 const movieprice5 =()=>{
 settotalmovieprice(movie*270)
 setmoviename('Mission Istaanbul')
 setmovietime('04.10 PM')
+setmoviedate('12/29/23')
 }
 const movieprice6=()=>{
 settotalmovieprice(movie*360)
 setmoviename('Bhoot Police')
 setmovietime('06.10 PM')
+setmoviedate('12/30/23')
 }
 
 const movieprice7 =()=>{
 settotalmovieprice(movie*40)
 setmoviename('Heropanti-2')
 setmovietime('08.10 PM')
+setmoviedate('1/1/24')
 }
 // for movie and seat
 const [movieseatprice , setmovieseat] = useState(0)
@@ -139,7 +147,7 @@ e.target.style.backgroundColor='green'
 e.target.style.border='2px solid green'
  }
  const item6 =(e)=>{
-  setfood6(movie*450)
+  
    settotalfood(totalfood+(movie*450))
 e.target.style.backgroundColor='green'
 e.target.style.border='2px solid green'
@@ -153,7 +161,7 @@ e.target.style.border='2px solid green'
 // total
 const [all,setall]=useState()
 const allinclude=()=>{
-setall(totalmovieprice+totalfood+seatprice)
+setall(totalfood+seatprice)
 }
   return (
    <div>
@@ -169,8 +177,8 @@ setall(totalmovieprice+totalfood+seatprice)
     <Route exact path='/movie' element={<Movie handlechangemovie={handlechangemovie}movieprice1={movieprice1} movieprice2={movieprice2} movieprice4={movieprice4} movieprice5={movieprice5} movieprice7={movieprice7} movieprice3={movieprice3} movieprice6={movieprice6}/>}/>
     <Route exact path='/confirm-movie' element={<Confirmmovie totalmovieprice={totalmovieprice} moviename={moviename} movietime={movietime} seatmovie={seatmovie} />}/>
     <Route exact path='/food' element={ <Food handlechangemovie={handlechangemovie} item1={item1} item2={item2} item3={item3} item4={item4} item5={item5} item6={item6} item7={item7} allinclude={allinclude}/>} />
-    <Route exact path='/finish1' element={  <Finish1 seatprice={seatprice} totalmovieprice={totalmovieprice} movieseatprice={movieseatprice} /> } />
-    <Route exact path='/final' element={ <Final all={all} seatprice={seatprice} totalmovieprice={totalmovieprice} totalfood={totalfood}/>}/>
+    <Route exact path='/finish1' element={  <Finish1 seatprice={seatprice} totalmovieprice={totalmovieprice} movieseatprice={movieseatprice} moviedate={moviedate}/> } />
+    <Route exact path='/final' element={ <Final all={all} seatprice={seatprice} totalmovieprice={totalmovieprice} totalfood={totalfood} moviedate={moviedate}/>}/>
    
  
     </Routes>
