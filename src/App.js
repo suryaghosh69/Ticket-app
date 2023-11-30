@@ -28,7 +28,7 @@ e.target.style.boxShadow=" 0 5px 50px green"
 
   }
 
- 
+ //sd
   const seatbook2 =(e)=>{
 setseatprice(seatprice+450)
 e.target.style.backgroundColor="green"
